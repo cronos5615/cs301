@@ -81,18 +81,17 @@ app.layout = html.Div(children=[
     html.Div(style={
         'display':'flex',
         'flexDirection':'row',
-        'alignItems':'center',
         'justifyContent':'center',
-        'gap':'20px'
 
     },children=[
+        html.Div(style={'width':'25%'},children=[
         dcc.Graph(id='bargraph',
-        figure=fig_barchart,
-        style={'width': '100%'}),
-
+        figure=fig_barchart),
+    ]),
+        html.Div(style={'width':'25%'},children=[
         dcc.Graph(id='boxplot',
-        figure=fig_boxplot,
-        style={'width':'100%'})
+        figure=fig_boxplot),
+    ]),
 
 
     ]) 
